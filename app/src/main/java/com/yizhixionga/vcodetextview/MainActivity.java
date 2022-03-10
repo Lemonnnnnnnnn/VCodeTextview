@@ -5,20 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.yizhixionga.textview.VCodeTextView;
+import com.yizhixionga.textview.VerificationCodeView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements VerificationCodeView.OnVerificationCodeCompleteListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        VCodeTextView vCodeTextView =new VCodeTextView(MainActivity.this);
-        vCodeTextView.setVCodeCompleteListener(new VCodeTextView.VCodeCompleteListener() {
-            @Override
-            public void VCodeComplete(String code) {
-                Toast.makeText(MainActivity.this,code,Toast.LENGTH_LONG).show();
-            }
-        });
+        VerificationCodeView vCodeTextView =new VerificationCodeView(MainActivity.this);
+        vCodeTextView.setOnVerificationCodeCompleteListener(this);
+    }
+
+    @Override
+    public void verificationCodeComplete(String verificationCode) {
+        Toast.makeText(MainActivity.this,verificationCode,Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void verificationCodeIncomplete(String verificationCode) {
+
     }
 }

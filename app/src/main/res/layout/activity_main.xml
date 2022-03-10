@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.yizhixionga.textview.VCodeTextView
-        android:layout_width="300dp"
+    <com.yizhixionga.textview.VerificationCodeView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:vCodeBackgroundFocus="@drawable/bg_focus"
         app:vCodeBackgroundNormal="@drawable/bg_normal"
         app:vCodeDataLength="6"
-        app:vCodeHeight="45dp"
-        app:vCodeMargin="10dp"
+        app:vCodeHeight="60dp"
+        app:vCodeMargin="5dp"
         app:vCodeTextColor="@color/black"
-        app:vCodeTextSize="8sp"
-        app:vCodeWidth="45dp"
+        app:vCodeTextSize="30sp"
+        app:vCodeWidth="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
