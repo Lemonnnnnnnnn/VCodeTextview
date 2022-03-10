@@ -26,7 +26,7 @@ import java.util.List;
  */
 public class VerificationCodeView extends RelativeLayout {
 
-    private OnVerificationCodeCompleteListener onVerificationCodeCompleteListener;
+    OnVerificationCodeCompleteListener onVerificationCodeCompleteListener;
 
     //输入的长度
     private int vCodeLength = 6;
