@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "VCodeTextView"
 include ':app'
+include ':vcodetextview'
