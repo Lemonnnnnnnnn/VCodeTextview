@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements VerificationCodeV
 
     @Override
     public void verificationCodeComplete(String verificationCode) {
-        Toast.makeText(MainActivity.this,verificationCode,Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,verificationCode,Toast.LENGTH_SHORT).show();
     }
 
     @Override
