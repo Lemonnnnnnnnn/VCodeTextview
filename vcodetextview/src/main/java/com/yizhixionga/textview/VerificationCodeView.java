@@ -3,6 +3,7 @@ package com.yizhixionga.textview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
@@ -49,7 +50,9 @@ public class VerificationCodeView extends RelativeLayout {
     //TextView字体颜色
     private int tvTextColor;
     //TextView字体大小
-    private float tvTextSize = 8;
+    private float tvTextSize = 20;
+    //字体是否加粗
+    private boolean isBold = false;
 
     public VerificationCodeView(Context context) {
         this(context, null);
@@ -70,8 +73,9 @@ public VerificationCodeView(Context context, AttributeSet attrs, int defStyleAtt
     tvMarginRight = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeMargin, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,10,getResources().getDisplayMetrics()));
     tvWidth = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeWidth, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,45,getResources().getDisplayMetrics()));
     tvHeight = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeHeight, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,45,getResources().getDisplayMetrics()));
-    tvTextSize = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeTextSize, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,8,getResources().getDisplayMetrics()));
+    tvTextSize = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeTextSize, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,20,getResources().getDisplayMetrics()));
     tvTextColor = typedArray.getColor(R.styleable.VCodeTextView_vCodeTextColor, Color.BLACK);
+    isBold = typedArray.getBoolean(R.styleable.VCodeTextView_vCodeTextBold,false);
     //用完回收
     typedArray.recycle();
     init();
@@ -183,6 +187,9 @@ private void initEditText() {
 
             //textView.setLayoutParams(layoutParams);
             textView.setBackgroundResource(tvBgNormal);
+            if (isBold){
+                textView.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+            }
             textView.setGravity(Gravity.CENTER);
             //注意单位
             textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,tvTextSize);

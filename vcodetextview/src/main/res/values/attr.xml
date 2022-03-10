@@ -17,6 +17,8 @@
         <attr name="vCodeBackgroundNormal" format="reference" />
         <!-- 验证码焦点背景 -->
         <attr name="vCodeBackgroundFocus" format="reference" />
+        <!-- 字体加粗 -->
+        <attr name="vCodeTextBold" format="boolean"/>
     </declare-styleable>
 
 </resources>
