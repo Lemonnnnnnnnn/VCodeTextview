@@ -6,7 +6,7 @@
         <!-- 验证码字体大小 -->
         <attr name="vCodeTextSize" format="dimension" />
         <!-- 验证码字体颜色 -->
-        <attr name="vCodeTextColor" format="color" />
+        <attr name="android:textColor"/>
         <!-- 验证码框的宽度 -->
         <attr name="vCodeWidth" format="dimension" />
         <!-- 验证码框的高度 -->
@@ -14,9 +14,9 @@
         <!-- 验证码框间距 -->
         <attr name="vCodeMargin" format="dimension" />
         <!-- 验证码默认背景 -->
-        <attr name="vCodeBackgroundNormal" format="reference" />
+        <attr name="vCodeBackgroundNormal" format="reference|color" />
         <!-- 验证码焦点背景 -->
-        <attr name="vCodeBackgroundFocus" format="reference" />
+        <attr name="vCodeBackgroundFocus" format="reference|color" />
         <!-- 字体加粗 -->
         <attr name="vCodeTextBold" format="boolean"/>
     </declare-styleable>

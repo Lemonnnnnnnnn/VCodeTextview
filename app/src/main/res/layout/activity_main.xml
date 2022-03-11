@@ -9,12 +9,12 @@
     <com.yizhixionga.textview.VerificationCodeView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         app:vCodeBackgroundFocus="@drawable/focus"
         app:vCodeBackgroundNormal="@drawable/normal"
         app:vCodeDataLength="6"
         app:vCodeHeight="60dp"
         app:vCodeMargin="5dp"
-        app:vCodeTextColor="@color/black"
         app:vCodeTextSize="30sp"
         app:vCodeWidth="60dp"
         app:vCodeTextBold ="true"

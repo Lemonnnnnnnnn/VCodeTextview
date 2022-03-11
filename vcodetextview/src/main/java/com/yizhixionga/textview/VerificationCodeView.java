@@ -74,7 +74,7 @@ public class VerificationCodeView extends RelativeLayout {
         tvWidth = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeWidth, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 45, getResources().getDisplayMetrics()));
         tvHeight = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeHeight, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 45, getResources().getDisplayMetrics()));
         tvTextSize = typedArray.getDimensionPixelSize(R.styleable.VCodeTextView_vCodeTextSize, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 20, getResources().getDisplayMetrics()));
-        tvTextColor = typedArray.getColor(R.styleable.VCodeTextView_vCodeTextColor, Color.BLACK);
+        tvTextColor = typedArray.getColor(R.styleable.VCodeTextView_android_textColor, Color.BLACK);
         isBold = typedArray.getBoolean(R.styleable.VCodeTextView_vCodeTextBold, false);
         //用完回收
         typedArray.recycle();
